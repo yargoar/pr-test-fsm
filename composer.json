@@ -1,0 +1,25 @@
+{
+  "name": "yargoar/pr-test-fsm",
+  "description": "Project built in a context of a test to the company P.R.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "iargo anjos rocha",
+      "email": "yargo.ar@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "FSM\\": "src/FSM"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "10.0"
+  },
+  "version": "1.0.0"
+}
