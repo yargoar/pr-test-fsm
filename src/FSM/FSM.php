@@ -35,16 +35,16 @@ class FSM
         ?callable $onCompletionCallback = null
     ) {
         if (!$states->hasState($initialState)) {
-            throw new InvalidArgumentException('Invalid initial state.');  // Throws error if the initial state is not valid
+            throw new InvalidArgumentException('Invalid initial state.');
         }
 
-        $this->states = $states;  // Sets the states
-        $this->transitions = $transitions; // Sets the initial transitions
-        $this->alphabet = $alphabet;  // Sets the alphabet
-        $this->currentState = $initialState;  // Sets the initial state
+        $this->states = $states;
+        $this->transitions = $transitions;
+        $this->alphabet = $alphabet;
+        $this->currentState = $initialState;
 
-        $this->onStateChangeCallback = $onStateChangeCallback; // Sets callback in state change
-        $this->onCompletionCallback = $onCompletionCallback; // Sets callback in a complete processing
+        $this->onStateChangeCallback = $onStateChangeCallback;
+        $this->onCompletionCallback = $onCompletionCallback;
     }
 
     /**

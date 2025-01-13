@@ -6,9 +6,9 @@ use InvalidArgumentException;
 
 class Transition
 {
-    private State $sourceState;  // State from the transition originates
-    private State $targetState;  // State to the transition leads
-    private string $symbol;  // Symbol that triggers the transition
+    private State $sourceState;
+    private State $targetState;
+    private string $symbol;
 
     /**
      * @param State $sourceState The state from which the transition starts.

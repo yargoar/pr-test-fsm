@@ -4,9 +4,6 @@ namespace FSM;
 
 use RuntimeException;
 
-/**
- * The Transitions class manages state transitions.
- */
 class Transitions
 {
     private array $transitions = [];
