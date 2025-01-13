@@ -28,9 +28,6 @@ As requested I implemented the modThree procedure in the file
 You can run the tests using PHPUnit. Make sure you have PHPUnit installed and then run the following command:
 
 ```bash
-git clone https://github.com/yargoar/pr-test-fsm.git
-cd pr-test-fsm
-composer install
 vendor/bin/phpunit .\tests\FSMmodThreeTests.php
 ```
 
