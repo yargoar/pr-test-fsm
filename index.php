@@ -1,5 +1,4 @@
 <?php
-// Inclua a função modThree
 use FSM\FSM;
 use FSM\Alphabet;
 use FSM\State;
@@ -8,13 +7,15 @@ use FSM\Transition;
 use FSM\Transitions;
 
 require_once __DIR__ . '/vendor/autoload.php';
-require_once 'modthree.php'; // Ajuste o caminho para o seu arquivo
+require_once 'modthree.php';
 
 
+$input = '1101'; // default 13
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $input = $_POST['binary_input'];
+    $input = $_POST['binary_input'] ?? '1101';
     $result = modThree($input);
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -89,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <h1>Mod Three Function Demonstration</h1>
     <form method="POST" action="">
         <label for="binary_input">Enter a binary string:</label>
-        <input type="text" id="binary_input" name="binary_input" value="<?php echo $input ? htmlspecialchars($input) : '1101'; ?>" required>
+        <input type="text" id="binary_input" name="binary_input" value="<?php echo $input; ?>" required>
         <button type="submit">Calculate</button>
     </form>
 

@@ -33,7 +33,12 @@ function modThree(String $input): int
     $transitions->addTransition(new Transition($states->getStateByName('S2'), '1', $states->getStateByName('S2')));
 
     // Setup FSM
-    $fsm = new FSM($states, $alphabet, $states->getStateByName('S0'), $transitions);
+    $fsm = new FSM(
+        $states,
+        $alphabet,
+        $states->getStateByName('S0'),
+        $transitions
+    );
 
     return  $fsm->getFinalState($input)->getValue();
 }

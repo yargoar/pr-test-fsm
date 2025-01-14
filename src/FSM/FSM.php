@@ -62,12 +62,15 @@ class FSM
             throw new InvalidArgumentException("Invalid symbol: {$symbol}");
         }
 
+        $currentState = $this->currentState;
+        $newState = $this->transitions->applyTransition($this->currentState, $symbol);
+
         // Execute the onStateChange callback
         if ($this->onStateChangeCallback) {
-            call_user_func($this->onStateChangeCallback, $this->currentState, $newState, $symbol);
+            call_user_func($this->onStateChangeCallback, $currentState, $newState, $symbol);
         }
+        $this->currentState = $newState;
 
-        $this->currentState = $this->transitions->applyTransition($this->currentState, $symbol);
         return $this->currentState;
     }
 
