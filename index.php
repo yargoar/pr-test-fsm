@@ -107,6 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <li><b>1110</b> → <?php echo modThree("1110"); ?> (14 mod 3 = 2)</li>
         <li><b>1111</b> → <?php echo modThree("1111"); ?> (15 mod 3 = 0)</li>
     </ul>
+    <p align="right"><a href="https://github.com/yargoar/pr-test-fsm" target="_blank" rel="noopener noreferrer">Project Github</a></p>
 </div>
 
 </body>
