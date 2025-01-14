@@ -47,7 +47,7 @@ You can run the benchmark script as follows:
 php tests/benchmark.php
 ```
 
-##Usage Example
+## Usage Example
 
 Here is a practical example showing how to create and configure a finite state machine using this library:
 
@@ -83,7 +83,7 @@ $fsm->processAllSymbols('1101');
 echo $fsm->getCurrentState()->getName();  // Output: S1
 ```
 
-##How to Expand the FSM Library
+## How to Expand the FSM Library
 
 The library was designed to be modular and extensible. Here are some ways developers can expand its functionality:
 
